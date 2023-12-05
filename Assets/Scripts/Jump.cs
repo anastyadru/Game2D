@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Jump : MonoBehaviour
 {
-    private Rigidbody2D rb;
+    Rigidbody2D rb;
     public bool ReadyJump;
     public bool ReadyGround;
     public int ForceJump;
@@ -16,7 +16,7 @@ public class Jump : MonoBehaviour
     
     void FixedUpdate()
     {
-        if (ReadyJump == true)
+        if (ReadyJump && ReadyGround)
         {
             rb.AddForce(new Vector2(0, ForceJump));
             ReadyJump = false;
