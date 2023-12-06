@@ -384,3 +384,23 @@ Received Import Request.
   path: Assets/Scripts/Jump.cs
   artifactKey: Guid(e4915cf08eec2e741a2a5154394923a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Scripts/Jump.cs using Guid(e4915cf08eec2e741a2a5154394923a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8aecc2c0a734e82128aaae58291bf026') in 0.021565 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.311295 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.14 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  6.348 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.03 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3369 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 133.8 MB.
+System memory in use after: 133.9 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 3956.
+Total: 15.452200 ms (FindLiveObjects: 0.726300 ms CreateObjectMapping: 0.479800 ms MarkObjects: 13.938000 ms  DeleteObjects: 0.305400 ms)
+
