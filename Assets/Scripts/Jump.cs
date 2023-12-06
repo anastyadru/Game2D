@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Jump : MonoBehaviour
 {
@@ -8,10 +10,14 @@ public class Jump : MonoBehaviour
     public bool ReadyJump;
     public bool ReadyGround;
     public int ForceJump;
+
+	public int score;
+	public Text scoreT;
     
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+		scoreT.text = score.ToString();
     }
     
     void FixedUpdate()
@@ -38,6 +44,15 @@ public class Jump : MonoBehaviour
         else
         {
             ReadyGround = false;
+        }
+		if (collision.gameObject.tag == "Enemy")
+        {
+            SceneManager.LoadScene(0);
+        }
+		if (collision.gameObject.tag == "Score")
+        {
+            score ++;
+			scoreT.text = score.ToString();
         }
     }
 }
