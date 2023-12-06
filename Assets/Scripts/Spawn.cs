@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class Spawn : MonoBehaviour
 {
-    // Start is called before the first frame update
+   	public Transform SpawnPos;
+	public GameObject Enemy;
+	public float time;
+
     void Start()
     {
-        
+        StartCoroutine(SpawnEnemy());
     }
 
-    // Update is called once per frame
-    void Update()
+    void Repeat()
     {
-        
+        StartCoroutine(SpawnEnemy());
     }
+
+	IEnumerator SpawnEnemy()
+	{
+		yield return new WaitForSeconds(time);
+		Instantiate(Enemy, SpawnPos.position, Quaternion.identity);
+		Repeat();
+	}
 }
