@@ -51,7 +51,7 @@ public class Jump : MonoBehaviour
         }
 		if (collision.gameObject.tag == "Score")
         {
-            score ++;
+            score++;
 			scoreT.text = score.ToString();
         }
     }
