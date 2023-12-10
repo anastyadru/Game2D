@@ -340,8 +340,6 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/VSSettingsProvider.ref.dll"
 "Assets/Fonts/Script/scriptTexttest.cs"
-"Assets/Scripts/Jump.cs"
-"Assets/Scripts/MoveEnemy.cs"
 "Assets/Scripts/PlayerController.cs"
 "Assets/Scripts/Spawn.cs"
 -langversion:8.0

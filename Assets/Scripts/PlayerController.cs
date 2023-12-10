@@ -16,11 +16,19 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        float movement = Input.GetAxis("Horizontal");
-        transform.position += new Vector3(movement, 0, 0) * speed * Time.deltaTime;
+        if (transform.position.y < -10)
+        {
+            ResetGame();
+        }
+        
+        transform.position += new Vector3(1, 0, 0) * speed * Time.deltaTime;
 
         if (Input.GetKeyDown(KeyCode.Space) && Mathf.Abs(rb.velocity.y) < 0.05f)
             rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
     }
-
+    
+    void ResetGame()
+    {
+        transform.position = new Vector3(-8, 1, 0);
+    }
 }
