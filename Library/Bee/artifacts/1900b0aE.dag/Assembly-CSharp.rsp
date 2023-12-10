@@ -342,6 +342,7 @@
 "Assets/Fonts/Script/scriptTexttest.cs"
 "Assets/Scripts/Jump.cs"
 "Assets/Scripts/MoveEnemy.cs"
+"Assets/Scripts/PlayerController.cs"
 "Assets/Scripts/Spawn.cs"
 -langversion:8.0
 
