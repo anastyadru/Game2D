@@ -9,11 +9,11 @@ C:\Program Files\Unity 2021.1.6f1\Editor\Unity.exe
 -batchMode
 -noUpm
 -name
-AssetImportWorker12
+AssetImportWorker23
 -projectPath
 G:/Учеба/C#/Unity задачи/Game2D
 -logFile
-Logs/AssetImportWorker12.log
+Logs/AssetImportWorker23.log
 -srvPort
 49658
 Successfully changed project path to: G:/Учеба/C#/Unity задачи/Game2D
