@@ -33,10 +33,12 @@ public class EnemyController : MonoBehaviour
         if (player.position.x < transform.position.x) // идет влево
         {
             physic.velocity = new Vector2(-speed, 0);
+            transform.localScale = new Vector2(0.5f, 0.5f);
         }
         else if (player.position.x > transform.position.x)
         {
             physic.velocity = new Vector2(speed, 0);
+            transform.localScale = new Vector2(-0.5f, 0.5f);
         }
     }
 

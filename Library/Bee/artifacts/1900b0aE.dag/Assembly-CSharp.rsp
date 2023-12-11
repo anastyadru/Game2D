@@ -342,7 +342,6 @@
 "Assets/Fonts/Script/scriptTexttest.cs"
 "Assets/Scripts/EnemyController.cs"
 "Assets/Scripts/PlayerController.cs"
-"Assets/Scripts/Spawn.cs"
 -langversion:8.0
 
 /deterministic
