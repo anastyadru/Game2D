@@ -26,17 +26,17 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && Mathf.Abs(rb.velocity.y) < 0.05f)
             rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
     }
-    
+
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Finish"))
         {
             ResetGame();
         }
     }
-    
+
     void ResetGame()
     {
-        transform.position = new Vector3(-8, 1, 0);
+        transform.position = new Vector3(-8.05f, 0.5f, 0);
     }
 }
