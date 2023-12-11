@@ -8,10 +8,10 @@ public class EnemyController : MonoBehaviour
     public Transform player;
     public float speed;
     public float agroDistance;
-    public Transform leftPoint; // левая крайняя точка
-    public Transform rightPoint; // правая крайняя точка
+    public Transform leftPoint;
+    public Transform rightPoint;
     
-    private bool movingRight = true; // флаг направления движения
+    private bool movingRight = true;
 
     void Start()
     {
@@ -36,7 +36,7 @@ public class EnemyController : MonoBehaviour
             if (transform.position.x >= rightPoint.position.x)
             {
                 movingRight = false;
-                transform.localScale = new Vector2(-0.5f, 0.5f); // поворот влево
+                transform.localScale = new Vector2(-0.5f, 0.5f);
             }
         }
         else
@@ -44,14 +44,14 @@ public class EnemyController : MonoBehaviour
             if (transform.position.x <= leftPoint.position.x)
             {
                 movingRight = true;
-                transform.localScale = new Vector2(0.5f, 0.5f); // поворот вправо
+                transform.localScale = new Vector2(0.5f, 0.5f);
             }
         }
     }
 
     void StartHunting()
     {
-        if (player.position.x < transform.position.x) // идет влево
+        if (player.position.x < transform.position.x)
         {
             physic.velocity = new Vector2(-speed, 0);
             transform.localScale = new Vector2(0.5f, 0.5f);
