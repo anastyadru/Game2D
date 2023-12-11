@@ -27,6 +27,14 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
     }
     
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            ResetGame();
+        }
+    }
+    
     void ResetGame()
     {
         transform.position = new Vector3(-8, 1, 0);

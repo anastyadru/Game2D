@@ -8,7 +8,11 @@ public class EnemyController : MonoBehaviour
     public Transform player;
     public float speed;
     public float agroDistance;
+    public Transform leftPoint; // левая крайняя точка
+    public Transform rightPoint; // правая крайняя точка
     
+    private bool movingRight = true; // флаг направления движения
+
     void Start()
     {
         physic = GetComponent<Rigidbody2D>();
@@ -25,6 +29,21 @@ public class EnemyController : MonoBehaviour
         else
         {
             StopHunting();
+        }
+        
+        if (movingRight)
+        {
+            if (transform.position.x >= rightPoint.position.x)
+            {
+                movingRight = false;
+            }
+        }
+        else
+        {
+            if (transform.position.x <= leftPoint.position.x)
+            {
+                movingRight = true;
+            }
         }
     }
 
