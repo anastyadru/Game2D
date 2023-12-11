@@ -28,7 +28,7 @@ public class EnemyController : MonoBehaviour
         }
         else
         {
-            StopHunting();
+            StartPatrolling();
         }
         
         if (movingRight)
@@ -36,6 +36,7 @@ public class EnemyController : MonoBehaviour
             if (transform.position.x >= rightPoint.position.x)
             {
                 movingRight = false;
+                transform.localScale = new Vector2(-0.5f, 0.5f); // поворот влево
             }
         }
         else
@@ -43,6 +44,7 @@ public class EnemyController : MonoBehaviour
             if (transform.position.x <= leftPoint.position.x)
             {
                 movingRight = true;
+                transform.localScale = new Vector2(0.5f, 0.5f); // поворот вправо
             }
         }
     }
@@ -61,8 +63,17 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    void StopHunting()
+    void StartPatrolling()
     {
-        physic.velocity = new Vector2(0, 0);
+        if (movingRight)
+        {
+            physic.velocity = new Vector2(speed, 0);
+            transform.localScale = new Vector2(-0.5f, 0.5f);
+        }
+        else
+        {
+            physic.velocity = new Vector2(-speed, 0);
+            transform.localScale = new Vector2(0.5f, 0.5f);
+        }
     }
 }
